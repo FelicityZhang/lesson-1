@@ -32,3 +32,10 @@
     color:#64C8FA;
     margin-bottom: -30px;
 }
+
+.link{
+    text-decoration: none;
+    color:white;
+    width:100%;
+    margin-left:40%;
+}

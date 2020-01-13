@@ -18,7 +18,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
- 
+    
 }
 
 .userInfo{
@@ -31,6 +31,42 @@
 
 .title{
     font-size: 2.3em;
-    color:#64C8FA;
     margin-bottom: -30px;
+    color: black;
+}
+
+.img{
+    background-image: url('./ok.png');
+    width:200px;
+    height:200px;
+    background-repeat: no-repeat;
+    background-size: 40% auto;
+    width: 100%;
+   margin-left: 60%;
+}
+
+
+.emailInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:1.2em;
+}
+
+.button{
+    width:60%;
+    height:50px;
+    background-color:#64C8FA;
+    color:white;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link{
+    text-decoration: none;
+    color:white;
+    width:100%;
+    margin-left:40%;
 }

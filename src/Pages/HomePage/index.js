@@ -8,6 +8,7 @@ class HomePage extends Component {
         super( props )
         this.state = {
             email: '11111 ',
+
         }
         this.handleChange = this.handleChange.bind( this );
         this.handleSubmit = this.handleSubmit.bind( this );
@@ -16,6 +17,7 @@ class HomePage extends Component {
     handleChange = ( event ) => {
         this.setState( { email: event.target.value } )
     }
+
 
     handleSubmit( e ) {
         e.preventDefault();
@@ -26,11 +28,13 @@ class HomePage extends Component {
         this.props.history.push( `/submit` )
     }
 
+
+
     render() {
         return (
             <div>
                 <div className='mainPage'>
-                    <p>email:{ this.state.email }</p>
+                    {/* <p>email:{ this.state.email }</p> */ }
                     <div className='infoBox'>
                         <p className='title'>Special Gift for You!</p>
                         <form className='userInfoBox' onSubmit={ this.handleSubmit } >
@@ -38,9 +42,9 @@ class HomePage extends Component {
                                 <input
                                     name="name"
                                     placeholder="Contact Name"
-                                    className='input' onChange={ this.handleChange }></input>
-                                <input className='input' placeholder='Date of Birth' onChange={ e => this.props.handleChange( e ) }></input>
-                                <input className='input' placeholder='Gender' onChange={ e => this.props.handleChange( e ) }></input>
+                                    className='input' ></input>
+                                <input className='input' onClick={ this.handleClick } placeholder='Date of Birth' ></input>
+                                <input className='input' placeholder='Gender'></input>
                                 <input
                                     placeholder='Email Address'
                                     type="text"
@@ -59,29 +63,3 @@ export default withRouter( HomePage );
 
 
 
-
-    // onFormSubmit = ( event ) => {
-    //     console.log( 'onformsubmit clikced' )
-    //     event.preventDefault()
-    //     let data = {
-    //         name: this.state.name,
-    //         date_of_birth: this.state.date_of_birth,
-    //         gender: this.state.gender,
-    //         email: this.state.email,
-    //     };
-    //     fetch( 'http://localhost:8888/users', {
-    //         method: 'POST',
-    //         body: JSON.stringify( data ),
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         }
-    //     } ).then( response => {
-    //         return response.json();
-    //     } )
-    //     this.setState( {
-    //         name: '',
-    //         date_of_birth: '',
-    //         gender: '',
-    //         email: '',
-    //     } )
-    // }
